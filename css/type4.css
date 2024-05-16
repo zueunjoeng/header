@@ -1,7 +1,10 @@
+.gnb a:hover {
+  color: red !important;
+}
 .gnb:hover ul {
   height: 180px;
 }
-.gnb li:hover a {
+.gnb > li:hover > a {
   color: red;
 }
 .gnb ul {

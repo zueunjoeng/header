@@ -1,0 +1,19 @@
+#hd a {
+  text-decoration: none;
+}
+#hd .gnb .d1 .gnb_d1_a {
+  font-size: 1.2em;
+  color: black;
+}
+#hd .gnb .d1 ul {
+  min-width: 80px;
+  white-space: nowrap;
+  background-color: black !important;
+}
+#hd .gnb .d1 ul.gnb_d2_ul {
+  left: 3rem;
+}
+#hd .gnb .d1 ul li a {
+  font-size: 0.85rem;
+  color: white;
+}

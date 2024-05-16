@@ -1,51 +1,66 @@
-#hd{ 
-    
-    a{text-decoration: none; }
+#hd{
+    a{
+        text-decoration: none;
+    }
     .gnb{
-       
         .d1{
             //대메뉴 li
-
             &:hover{
-                // 대메뉴의 롤오버사 소메뉴 노출
+                //대메뉴의 롤오버시 소메뉴 노출
                 ul{
-                    display:block;
-                    height: 180px;
-            
+                   max-height:180px;
                 }
             }
             .gnb_d1_a{
                 //대메뉴
-                font-size: 1.2em;
-                color: black;
-               
+               font-size: 1.2em;
+               color:black;
             }
-            
-        
             ul{
-                // 소메뉴
+                //소메뉴
                 min-width: 80px;
                 white-space: nowrap;
                 background-color: black !important;
-                height:0;
-                overflow:hidden;
+                max-height: 0;
+                transition: max-height 0.5s;
+                overflow: hidden;
                 padding: 0 1rem !important;
-                border: 0 !important;
-                transition: 1s;
+                border:0 !important;
+                
+                &:before,
+                &:after{
+                    content:"";
+                    display:block;
+                    height:16px;
 
-                &.gnb_d2_ul{
-                    // 소메뉴 위치 이동
-                    left: -2rem;
                 }
-            
+
+
+                &.leftul{
+                    left:-2rem;
+                }               
                 li{
-                  // 소메뉴 li
                     a{
-                     font-size: 0.85rem;
-                     color:white;
+                        font-size: 0.85rem;
+                        color:white !important;
                     }
                 }
             }
+
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

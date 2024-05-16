@@ -10,9 +10,8 @@
                 // 대메뉴의 롤오버사 소메뉴 노출
                 ul{
                     display:block;
-                    max-height: 150px;
-                    transition: max-height 10s ease-in-out!important;
-                    overflow: auto;
+                    height: 180px;
+            
                 }
             }
             .gnb_d1_a{
@@ -28,7 +27,12 @@
                 min-width: 80px;
                 white-space: nowrap;
                 background-color: black !important;
-                display: none;
+                height:0;
+                overflow:hidden;
+                padding: 0 1rem !important;
+                border: 0 !important;
+                transition: 1s;
+
                 &.gnb_d2_ul{
                     // 소메뉴 위치 이동
                     left: -2rem;

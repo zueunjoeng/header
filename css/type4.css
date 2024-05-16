@@ -1,0 +1,13 @@
+.gnb:hover ul {
+  height: 180px;
+}
+.gnb li:hover a {
+  color: red;
+}
+.gnb ul {
+  top: 100%;
+  min-width: 120px;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+}

@@ -1,9 +1,10 @@
-#hd{
-    a{
+ a{
         text-decoration: none;
         color: black;
     }
-
+#hd{
+    position:relative;
+   
         h1,
         .iconMenu{
             width:0;
@@ -15,47 +16,53 @@
             }
         }
         .gnb {
-            .gnb_li{
-                &:hover{
-                    .gnb_a {
-                        color:red; //활성화
+            &:before{
+                content:"";
+                position: absolute;
+                left: 0; right: 0;
+                top:100%;
+                height:0;
+                transition: 0.5s;
+                background-color: rgba(225,255,255,.8);
+            }
+            &:hover{
+                &:before{
+                    height: 180px;
+                }
+                .gnb_li{
+                    &:hover{
+                        .gnb_a {
+                            color:red; //활성화
+                        }
                     }
                     .gnb_ul{
-                        max-height: 180px;// 각각의 소메뉴 사이즈가 다르므로 height로 진행불가
-                        border-radius: 0 0 30px 30px;
-                        transition: border-radius 0.5s ease 0.5s, max-height 0.5s ease;
-                        border-bottom: 1px solid black;
-                    }
-    
+                        height: 180px;
+                    }   
+                    
                 }
+                    
+                
+            }
+            .gnb_li{
+                padding:0 35px !important;
+
                 .gnb_a {
                     font-size: 1.2rem;
                 }
                 
                 .gnb_ul{
                     min-width:10rem;
-                    background-color: white;
-                    margin: -1px 0.5rem 0 0;
-                    border:1px solid black;
-                    border-top:0;
-                    border-bottom: 0;
                     overflow: hidden;
-                    // 모든 소메뉴 대메뉴를 기준으로 정가운데로
-                    transform: translateX(-50%);
-                    left: 50%;
-                    //드롭애니메이션
-                   max-height: 0px;
-                    overflow: hidden;
-                    transition: border-radius 0.5s ease;
+                    height: 0px;
+                    transition: 0.5s;
+                    left:-35px;
+                    text-align: center;
 
-    
-                    &:after,
-                    &:before{
+                    &:after, &:before{
                         content: "";
                         display: block;
                         height: 1rem;
                     }
-                    // &:after{border-bottom: 1px solid black;}
                 }
             }
         }

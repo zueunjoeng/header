@@ -3,65 +3,60 @@
         text-decoration: none;
         color: black;
     }
-    h1,.iconMenu{
-        width:0;
-    }
-    h1{
-        a{
-            white-space: nowrap;
+
+        h1,
+        .iconMenu{
+            width:0;
         }
-    }
-    .gnb {
-        .gnb_li{
-            &:hover{
-                .gnb_a {
-                    color:red; //활성화
+        h1{
+            a{
+                white-space: nowrap;
+                
+            }
+        }
+        .gnb {
+            .gnb_li{
+                &:hover{
+                    .gnb_a {
+                        color:red; //활성화
                     }
                     .gnb_ul{
-                         max-height: 180px;
-                         border-radius: 0 0 30px 30px;
+                        max-height: 180px;// 각각의 소메뉴 사이즈가 다르므로 height로 진행불가
+                        border-radius: 0 0 30px 30px;
+                        transition: border-radius 0.5s ease 0.5s, max-height 0.5s ease;
+                        border-bottom: 1px solid black;
                     }
-            }
-            .gnb_a {
-            font-size: 1.2rem;
-            }
-            .gnb_ul{
-                min-width: 10rem;
-                // padding:0 1.5rem;
-                background-color: white;
-                margin-top: -1px;
-                margin-right: 4rem;
-                border:1px solid black;
-                border-top:0;
-                border-bottom:0;
-                // border-radius: 0 0 10px 10px;
-                overflow: hidden;
-                // 모든 소메뉴 대메뉴를 기준으로 정 가운대로
-                transform: translateX(-50%);
-                left: 50%;
-                //드롭다운 애니메이션
-                max-height: 0;
-                overflow: hidden;
-                transition: 0.5s;
-                transition-delay: 1s;
-
-
-                &::after,
-                &::before{
-                    content:"";
-                    display: block;
-                    height: 1rem;
+    
+                }
+                .gnb_a {
+                    font-size: 1.2rem;
                 }
                 
-                &
-                &:after{
-                    border-bottom: 1px solid black;
+                .gnb_ul{
+                    min-width:10rem;
+                    background-color: white;
+                    margin: -1px 0.5rem 0 0;
+                    border:1px solid black;
+                    border-top:0;
+                    border-bottom: 0;
+                    overflow: hidden;
+                    // 모든 소메뉴 대메뉴를 기준으로 정가운데로
+                    transform: translateX(-50%);
+                    left: 50%;
+                    //드롭애니메이션
+                   max-height: 0px;
+                    overflow: hidden;
+                    transition: border-radius 0.5s ease;
 
+    
+                    &:after,
+                    &:before{
+                        content: "";
+                        display: block;
+                        height: 1rem;
+                    }
+                    // &:after{border-bottom: 1px solid black;}
                 }
             }
         }
-        
-        
-    }
-   
 }

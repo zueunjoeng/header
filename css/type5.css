@@ -2,7 +2,8 @@
   text-decoration: none;
   color: black;
 }
-#hd h1, #hd .iconMenu {
+#hd h1,
+#hd .iconMenu {
   width: 0;
 }
 #hd h1 a {
@@ -14,6 +15,8 @@
 #hd .gnb .gnb_li:hover .gnb_ul {
   max-height: 180px;
   border-radius: 0 0 30px 30px;
+  transition: border-radius 0.5s ease 0.5s, max-height 0.5s ease;
+  border-bottom: 1px solid black;
 }
 #hd .gnb .gnb_li .gnb_a {
   font-size: 1.2rem;
@@ -21,24 +24,19 @@
 #hd .gnb .gnb_li .gnb_ul {
   min-width: 10rem;
   background-color: white;
-  margin-top: -1px;
-  margin-right: 4rem;
+  margin: -1px 0.5rem 0 0;
   border: 1px solid black;
   border-top: 0;
   border-bottom: 0;
   overflow: hidden;
   transform: translateX(-50%);
   left: 50%;
-  max-height: 0;
+  max-height: 0px;
   overflow: hidden;
-  transition: 0.5s;
-  transition-delay: 1s;
+  transition: border-radius 0.5s ease;
 }
-#hd .gnb .gnb_li .gnb_ul::after, #hd .gnb .gnb_li .gnb_ul::before {
+#hd .gnb .gnb_li .gnb_ul:after, #hd .gnb .gnb_li .gnb_ul:before {
   content: "";
   display: block;
   height: 1rem;
-}
-#hd .gnb .gnb_li .gnb_ul #hd .gnb .gnb_li .gnb_ul:after {
-  border-bottom: 1px solid black;
 }

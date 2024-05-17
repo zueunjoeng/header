@@ -1,4 +1,8 @@
 #hd{
+    a{
+        text-decoration: none;
+        color: black;
+    }
     h1,.iconMenu{
         width:0;
     }
@@ -7,4 +11,57 @@
             white-space: nowrap;
         }
     }
+    .gnb {
+        .gnb_li{
+            &:hover{
+                .gnb_a {
+                    color:red; //활성화
+                    }
+                    .gnb_ul{
+                         max-height: 180px;
+                         border-radius: 0 0 30px 30px;
+                    }
+            }
+            .gnb_a {
+            font-size: 1.2rem;
+            }
+            .gnb_ul{
+                min-width: 10rem;
+                // padding:0 1.5rem;
+                background-color: white;
+                margin-top: -1px;
+                margin-right: 4rem;
+                border:1px solid black;
+                border-top:0;
+                border-bottom:0;
+                // border-radius: 0 0 10px 10px;
+                overflow: hidden;
+                // 모든 소메뉴 대메뉴를 기준으로 정 가운대로
+                transform: translateX(-50%);
+                left: 50%;
+                //드롭다운 애니메이션
+                max-height: 0;
+                overflow: hidden;
+                transition: 0.5s;
+                transition-delay: 1s;
+
+
+                &::after,
+                &::before{
+                    content:"";
+                    display: block;
+                    height: 1rem;
+                }
+                
+                &
+                &:after{
+                    border-bottom: 1px solid black;
+
+                }
+            }
+        }
+        
+        
+    }
+   
 }
